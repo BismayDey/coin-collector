@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #87ceeb;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#game {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border: 5px solid #000;
+  background-color: #f0e68c;
+  overflow: hidden;
+}
+
+#player {
+  position: absolute;
+  bottom: 10px;
+  left: 130px;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 50%;
+  transition: transform 0.1s ease-in-out;
+}
+
+#coin {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: gold;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+#obstacle {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #8b0000;
+  border-radius: 50%;
+  display: none;
+}
+
+#power-up {
+  position: absolute;
+  top: -100px;
+  width: 30px;
+  height: 30px;
+  background-color: limegreen;
+  border-radius: 50%;
+}
+
+#scoreboard {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+#start-btn {
+  position: absolute;
+  top: 550px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#game-over-message {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: red;
+  font-weight: bold;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
